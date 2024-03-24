@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.field {
+    border-radius: 4px;
+}
+
+.button {
+    width: 180px;
+    margin: 0 auto;
+}
