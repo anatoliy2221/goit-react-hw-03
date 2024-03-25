@@ -19,7 +19,7 @@ const ContactForm = ({ onAdd }) => {
     phone: yup
       .string()
       .min(7, "Too short")
-      .max(12, "Too long")
+      .max(13, "Too long")
       .required("Required"),
   });
 
@@ -49,7 +49,7 @@ const ContactForm = ({ onAdd }) => {
           name="name"
           id={nameFieldId}
         ></Field>
-        <ErrorMessage name="name" as="span" />
+        <ErrorMessage className={css.error} name="name" component="span" />
         <label htmlFor={phoneFieldId}>Number</label>
         <Field
           className={css.field}
@@ -57,7 +57,7 @@ const ContactForm = ({ onAdd }) => {
           name="phone"
           id={phoneFieldId}
         ></Field>
-        <ErrorMessage name="phone" as="span" />
+        <ErrorMessage className={css.error} name="phone" component="span" />
         <button className={css.button} type="submit">
           Add contact
         </button>
